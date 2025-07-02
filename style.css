@@ -400,7 +400,7 @@ nav a.active::after {
 
 .info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
     gap: 20px;
 }
 
@@ -413,7 +413,7 @@ nav a.active::after {
     overflow: hidden;
     /* Скрываем вылезающий контент */
     overflow-wrap: break-word;
-    word-break: break-word;
+  word-break: break-word;
 }
 
 .info-card:hover {
@@ -1562,4 +1562,15 @@ footer {
         border-radius: 4px;
         cursor: pointer;
     }
+  .info-card {
+    padding: 10px 8px;
+  }
+  
+  .info-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .info-card li {
+    font-size: 0.9rem;
+  }
 }
