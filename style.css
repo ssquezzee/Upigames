@@ -1564,8 +1564,12 @@ footer {
     }
   .info-card {
     padding: 10px 8px;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    
   }
+
+.info-grid{
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+}
   
   .info-card h3 {
     font-size: 1.1rem;
