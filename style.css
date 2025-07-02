@@ -177,7 +177,7 @@ nav a.active::after {
     color: white;
     border: none;
     border-radius: 50%;
-    width: 36px;
+    width: 45px;
     height: 36px;
     display: flex;
     align-items: center;
@@ -400,7 +400,7 @@ nav a.active::after {
 
 .info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
     gap: 20px;
 }
 
@@ -413,7 +413,7 @@ nav a.active::after {
     overflow: hidden;
     /* Скрываем вылезающий контент */
     overflow-wrap: break-word;
-  word-break: break-word;
+    word-break: break-word;
 }
 
 .info-card:hover {
@@ -1228,8 +1228,8 @@ footer {
 @media (max-width: 768px) {
 
     .info-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        /* Уменьшено с 380px */
+        /* Для планшетов - уменьшаем минимальную ширину */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
     .info-card h3 {
@@ -1288,18 +1288,23 @@ footer {
     .sorting-rooms {
         flex-direction: column;
     }
+    
+    .theme-toggle {
+    width: 36px;
+    height: 36px;
+}
 }
 
 @media (max-width: 480px) {
 
     .info-grid {
+        /* Для мобильных - используем одну колонку */
         grid-template-columns: 1fr;
-        /* Всегда 1 колонка на маленьких экранах */
     }
 
+    /* Уменьшаем внутренние отступы карточек */
     .info-card {
         padding: 12px 10px;
-        /* Уменьшенные отступы */
     }
 
     .info-card h3 {
@@ -1403,11 +1408,11 @@ footer {
     }
 
     .info-card h3 {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .info-card li {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
     }
 
     .game-board {
@@ -1460,6 +1465,21 @@ footer {
 }
 
 @media (max-width: 320px) {
+    header {
+        padding: 8px 10px;
+    }
+
+    .logo img {
+        width: 150px;
+        /* Уменьшаем логотип */
+    }
+
+    .theme-toggle {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+
     .logo-text {
         font-size: 1.2rem;
     }
@@ -1562,20 +1582,51 @@ footer {
         border-radius: 4px;
         cursor: pointer;
     }
-  .info-card {
-    padding: 10px 8px;
-    
-  }
 
-.info-grid{
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
-}
-  
-  .info-card h3 {
-    font-size: 1.1rem;
-  }
-  
-  .info-card li {
-    font-size: 0.9rem;
-  }
+    .info-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;;;
+    }
+
+    .info-card {
+        padding: 10px;
+        margin: 0 -5px;
+        /* Расширяем на всю доступную ширину */
+    }
+
+    .info-card h3 {
+        font-size: 0.95rem;
+        line-height: 1.3;
+    }
+
+    .info-card ul {
+        padding-left: 15px;
+    }
+
+    .info-card li {
+        font-size: 0.8rem;
+        margin-bottom: 6px;
+    }
+
+    /* Уменьшаем заголовки */
+    .info-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .info-header p {
+        font-size: 0.9rem;
+    }
+
+    /* Словарь */
+    .vocabulary h3 {
+        font-size: 1.2rem;
+    }
+
+    .category h4 {
+        font-size: 1rem;
+    }
+
+    .items span {
+        padding: 3px 8px;
+        font-size: 0.75rem;
+    }
 }
