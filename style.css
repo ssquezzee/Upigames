@@ -1564,6 +1564,7 @@ footer {
     }
   .info-card {
     padding: 10px 8px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
   }
   
   .info-card h3 {
